@@ -35,9 +35,7 @@ jobs:
           mkdir -v -p ~/.local/share/godot/templates
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Web Build
-        run: |
-          pwd
-          ls          
+        run: |                    
           mkdir -v -p ./web           
           godot -v --export "HTML5" ./web/index.html
       - name: Upload Artifact
